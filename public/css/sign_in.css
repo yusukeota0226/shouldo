@@ -1,0 +1,14 @@
+.signinPage {
+  margin-top: 10vh;
+}
+.signinPage .title {
+  margin: 0;
+  text-align: center;
+}
+.signinPage .new_user .form-group {
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+.signinPage .new_user .form-group .form-control {
+  background: #f6f8fa;
+}
