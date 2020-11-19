@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//リスト一覧画面
+Route::get('/', 'ListingsController@index');
 
 Auth::routes();
 

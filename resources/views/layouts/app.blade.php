@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Kanban</title>
+    <title>Shouldo</title>
 
     <!-- Styles(ローカルの場合、secure_asset=>assetにすること) -->
     <link href="{{ secure_asset('css/sign_up.css') }}" rel="stylesheet">
@@ -42,7 +42,7 @@
     <ul class="header_menu">
       <li class="nav-link">{{Auth::user()->name }}さん</li>
       <li class="header_menu_title">
-          <a class="nav-link listNew" href="/">kanban</a>
+          <a class="nav-link listNew" href="/">Shouldo</a>
       </li>
       <li>
         <ul class="header_menu_inner">
