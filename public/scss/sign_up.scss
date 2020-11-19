@@ -1,32 +1,32 @@
-.signinPage {
+body {
+  overflow: visible;
+}
+
+.signupPage {
   margin-top: 10vh;
-  .title {
-    margin: 0;
+  .titleArea {
     text-align: center;
+    h1 {font-size: 2rem;}
   }
-  .new_user {
+  .signupForm {
     .form-group {
+      margin: 0 auto 1.5rem auto;
       max-width: 500px;
-      margin: 0 auto 1rem;
       .form-control {
         background: #f6f8fa;
       }
     }
   }
-  .loginBtn {
-    padding: 12px;
-    width: 200px;
-    border-radius: 21px;
+  .submitBtn {
     background: #29b744;
     color: #fff;
-    text-align: center;
-    border: none;
+    width: 200px;
     margin-top: 20px;
-    opacity: 1;
+    padding: 10px;
+    border-radius: 90px;
     transition: opacity .5s;
-    cursor: pointer;
     &:hover {
-      opacity: .7;
+      opacity: .6;
     }
   }
 }
