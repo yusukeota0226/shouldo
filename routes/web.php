@@ -17,6 +17,9 @@ Route::get('/', 'ListingsController@index');
 //リスト新規画面
 Route::get('/new', 'ListingsController@new')->name('new');
 
+//リスト新規登録処理
+Route::post('/listings', 'ListingsController@store');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
