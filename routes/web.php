@@ -14,6 +14,9 @@
 //リスト一覧画面
 Route::get('/', 'ListingsController@index');
 
+//リスト新規画面
+Route::get('/new', 'ListingsController@new')->name('new');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

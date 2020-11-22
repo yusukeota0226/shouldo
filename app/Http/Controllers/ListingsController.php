@@ -9,7 +9,7 @@ use Validator;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 
-class ListingsController extends Model
+class ListingsController extends Controller
 {
     //コンストラクタ
     public function __construct()
