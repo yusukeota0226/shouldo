@@ -20,6 +20,9 @@ Route::get('/new', 'ListingsController@new')->name('new');
 //リスト新規登録処理
 Route::post('/listings', 'ListingsController@store');
 
+//リスト更新画面
+Route::get('/listingsedit/{listing_id}', 'ListingsController@edit');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

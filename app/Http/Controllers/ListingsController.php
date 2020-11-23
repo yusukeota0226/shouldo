@@ -54,4 +54,12 @@ class ListingsController extends Controller
         //ルートにリダイレクト
         return redirect('/');
     }
+    
+    public function edit($listing_id)
+    {
+        $listing = Listing::find($listing_id);
+        
+        //テンプレート「listing/edit.blade.php」を表示する
+        return view('listing/edit', ['listing' => $listing]);
+    }
 }
