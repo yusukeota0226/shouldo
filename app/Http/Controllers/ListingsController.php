@@ -46,11 +46,10 @@ class ListingsController extends Controller
         
         //Listingモデルでリスト新規登録処理
         $listings = new Listing;
-        $listing->title = $request->list_name;
-        $listing->user_id = Auth::user()->id;
+        $listings->title = $request->list_name;
+        $listings->user_id = Auth::user()->id;
         
-        dd($listing);
-        $listing->save();
+        $listings->save();
         
         //ルートにリダイレクト
         return redirect('/');
