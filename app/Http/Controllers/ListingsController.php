@@ -62,4 +62,23 @@ class ListingsController extends Controller
         //テンプレート「listing/edit.blade.php」を表示する
         return view('listing/edit', ['listing' => $listing]);
     }
+    
+    public function update(Request $request)
+    {
+        //バリデーションチェック
+        $validator = Validator::make($request->all(), ['list_name' => 'required|max:255', ]);
+        
+        //バリデーションチェックの結果がエラーの場合
+        if($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+        
+        $listing = Listing::find($request->id);
+        $listing->title = $request->list_name;
+        
+        $listing->save();
+        
+        return redirect('/');
+    }
 }
