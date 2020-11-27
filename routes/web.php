@@ -26,6 +26,9 @@ Route::get('/listingsedit/{listing_id}', 'ListingsController@edit');
 //リスト更新処理
 Route::post('/listing/edit', 'ListingsController@update');
 
+//リスト削除処理
+Route::get('/listingsdelete/{listing}', 'ListingsController@delete');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

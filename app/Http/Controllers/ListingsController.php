@@ -81,4 +81,12 @@ class ListingsController extends Controller
         
         return redirect('/');
     }
+    
+    public function delete($listing_id)
+    {
+        $listing = Listing::find($listing_id);
+        $listing->delete();
+        
+        return redirect('/');
+    }
 }
