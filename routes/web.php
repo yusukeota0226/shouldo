@@ -32,3 +32,9 @@ Route::get('/listingsdelete/{listing}', 'ListingsController@delete');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//カード新規画面
+Route::get('listing/{listing_id}/card/new', 'CardsController@new')->name('new_card');
+
+//カード新規処理
+Route::post('listing/{listing_id}/card', 'CardsController@store');
