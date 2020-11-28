@@ -38,3 +38,15 @@ Route::get('listing/{listing_id}/card/new', 'CardsController@new')->name('new_ca
 
 //カード新規処理
 Route::post('listing/{listing_id}/card', 'CardsController@store');
+
+//カード詳細画面
+Route::get('listing/{listing_id}/card/{card_id}', 'CardsController@show');
+
+//カード編集画面
+Route::get('listing/{listing_id}/card/{card_id}/edit', 'CardsController@edit');
+
+//カード更新処理
+Route::post('/card/edit', 'CardsController@update');
+
+//カード削除処理
+Route::get('listing/{listing_id}/card/{card_id}/delete', 'CardsController@delete');
